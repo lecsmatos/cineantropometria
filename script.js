@@ -13,10 +13,7 @@
 
       //Obtendo a soma das dobras
       var somaDobras = triceps + subescapular + axilarMedia + peitoral + abdominal + supraIliaca + coxa;
-      
-      // Calcular a média das dobras cutâneas
-      // var mediaDobras = somaDobras / 7;
-      
+            
       // Calcular a densidade corporal de acordo com o protocolo e o gênero
       if(protocolo.value == "SeteDobras"){
         if (genero.value == "homem") {
@@ -37,9 +34,19 @@
 
       //Calcular o percentual de gordura
       var percentualGordura = ((4.95 / densidadeCorporal) - 4.5) * 100;
+
+      //Calcular o imc
+      var imc = (peso.value/(altura.value*altura.value))
+
+      //Composição corporal
+      var gorduraTotal = (percentualGordura*peso.value)/100;
+      var livreDeGordura = peso.value - gorduraTotal;
       
       // Exibir o resultado na página
-      document.getElementById("resultado").innerHTML = "Percentual de Gordura: " + percentualGordura.toFixed(2) + "%";
+      document.getElementById("resultado").innerHTML = "Percentual de Gordura: " + percentualGordura.toFixed(2) + " %";
+      document.getElementById("resultadoIMC").innerHTML = "IMC: " + imc.toFixed(2);
+      document.getElementById("resultadoGorduraTotal").innerHTML = "Massa de gordura: " + gorduraTotal.toFixed(2) + " Kg";
+      document.getElementById("resultadoLivreDeGordura").innerHTML = "Massa  livre de gordura: " + livreDeGordura.toFixed(2) + " Kg";
     }
       //Habilitando ou desabilitando campos de acordo com o protocolo
     function qualprotocolo() {
@@ -88,7 +95,7 @@
           coxa.value = "0";
       }
     }
-    // Função teste
+    //Separando as funções em abas
     function mostrarAba(abaId) {
         var abas = document.getElementsByClassName("tab-content");
         for (var i = 0; i < abas.length; i++) {

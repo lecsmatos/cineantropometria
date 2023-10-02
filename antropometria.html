@@ -34,14 +34,6 @@
     <label>Idade:</label>
     <input type="number" id="idade" required>
   </div>
- <!-- <div>
-    <label>Altura (cm):</label>
-    <input type="number" id="altura" required>
-  </div>
-  <div>
-    <label>Peso (kg):</label>
-  </div>
-  -->
   <div>
   <label>Sexo:</label>
     <select id="genero" onchange="qualprotocolo()">
@@ -98,7 +90,17 @@
     </div>
     
     <div id="aba2" class="tab-content">
-      <p><div>
+      <p>
+        <div>
+          <label>Altura (m):</label>
+          <input type="number" id="altura" required>
+        </div>
+        <div>
+          <label>Peso (kg):</label>
+          <input type="number" id="peso" required>
+        </div>
+        <br>
+        <div>
         <label>Selecione o protocolo</label>
         <select id="protocolo" onchange="qualprotocolo()">
           <option value="SeteDobras">7 dobras (Jackson e Pollock)</option>
@@ -138,7 +140,11 @@
       
       <button onclick="calcularPercentualGordura()">Calcular</button>
       
-      <p id="resultado"></p></p>
+      <p id="resultado"></p>
+      <p id="resultadoIMC"></p>
+      <p id="resultadoGorduraTotal"></p>
+      <p id="resultadoLivreDeGordura"></p>
+    </p>
     </div>
   </div>
 </body>
