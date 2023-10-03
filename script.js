@@ -105,3 +105,10 @@
         var aba = document.getElementById(abaId);
         aba.classList.add("active");
       }
+    //Calcular e exibir o valor do RCQ (Razão Cintura-Quadril)
+      function calcularRCQ()  {
+     
+      rcq = (cintura.value/quadril.value);
+      document.getElementById("resultadoRCQ").innerHTML = "RCQ: " + rcq.toFixed(2);
+
+    }

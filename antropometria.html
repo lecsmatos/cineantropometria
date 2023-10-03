@@ -27,11 +27,11 @@
 <body>
   <h1>Avaliação Antropométrica</h1>
   <div>
-    <label>Nome:</label>
+    <label for="nome">Nome:</label>
     <input type="text" id="nome" required>
   </div>
   <div>
-    <label>Idade:</label>
+    <label for="idade">Idade:</label>
     <input type="number" id="idade" required>
   </div>
   <div>
@@ -48,7 +48,7 @@
 
     <div id="aba1" class="tab-content">
       <h3>Insira o valor das circunferências (em centímetros)</h3>
-      <p><form>
+      <p>
         <label for="braco_direito_contraido">Braço Direito Contraído:</label>
         <input type="text" id="braco_direito_contraido" name="braco_direito_contraido">
     
@@ -65,13 +65,13 @@
         <input type="text" id="torax_relaxado" name="torax_relaxado"><br>
     
         <label for="cintura">Cintura:</label>
-        <input type="text" id="cintura" name="cintura"><br>
+        <input type="text" id="cintura" name="cintura" required><br>
     
         <label for="abdome">Abdome:</label>
         <input type="text" id="abdome" name="abdome"><br>
     
         <label for="quadril">Quadril:</label>
-        <input type="text" id="quadril" name="quadril"><br>
+        <input type="text" id="quadril" name="quadril" required><br>
     
         <label for="coxa_direita">Coxa Direita:</label>
         <input type="text" id="coxa_direita" name="coxa_direita">
@@ -85,18 +85,19 @@
         <label for="panturrilha_esquerda">Panturrilha Esquerda:</label>
         <input type="text" id="panturrilha_esquerda" name="panturrilha_esquerda"><br>
     
-        <input type="submit" value="Enviar">
-      </form></p>
+        <button onclick="calcularRCQ()">Calcular RCQ</button>
+        <p id="resultadoRCQ"></p>
+      </p>
     </div>
     
     <div id="aba2" class="tab-content">
       <p>
         <div>
-          <label>Altura (m):</label>
+          <label for="altura">Altura (m):</label>
           <input type="number" id="altura" required>
         </div>
         <div>
-          <label>Peso (kg):</label>
+          <label for="peso">Peso (kg):</label>
           <input type="number" id="peso" required>
         </div>
         <br>
